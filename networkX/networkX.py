@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# networkX graph generator and distribution
 
 import numpy as np
 import matplotlib.pyplot as plt

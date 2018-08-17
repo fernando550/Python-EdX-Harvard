@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# networkX degrees and component count
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -38,14 +38,20 @@ def basic_net_stats(g):
     print("num of edges: ", g.number_of_edges())
     degree_sequence = [d for n, d in g.degree()]
     print("Average degree: %.2f" % np.mean(degree_sequence))
+    print("\n")
 
-basic_net_stats(g1)
-basic_net_stats(g2)
-
-plot_degree_dist(g1)
-plot_degree_dist(g2)
-
-
-
+#basic_net_stats(g1)
+#basic_net_stats(g2)
+#
+#plot_degree_dist(g1)
+#plot_degree_dist(g2)
 
 
+# finding largest connection component
+g1_lcc = max(nx.connected_component_subgraphs(g1), key=len)
+g2_lcc = max(nx.connected_component_subgraphs(g2), key=len)
+
+plt.figure()
+nx.draw(g1_lcc, node_color="red", edge_color="grey", node_size=20)
+plt.figure()
+nx.draw(g2_lcc, node_color="green", edge_color="grey", node_size=20)

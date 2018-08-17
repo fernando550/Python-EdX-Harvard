@@ -1,4 +1,4 @@
-# K-Nearest Neighbors
+# kth nearest neighbor
 
 import numpy as np
 import random

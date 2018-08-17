@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# whisky correlations
 """
 Created on Tue Aug 14 15:11:08 2018
 
